@@ -1,0 +1,309 @@
+---
+  import 'swiper/css'; // Import CSS dasar saja
+  import 'aos/dist/aos.css';
+---
+
+<!-- Section Swiper with Feature Content -->
+<section class="relative bg-excelso-dark py-20 overflow-hidden">
+  <div id="Elixirs" class="container mx-auto px-4">
+
+    <!-- Desktop Layout Container (flex row) -->
+    <div class="flex flex-col md:flex-row md:items-center md:gap-6 lg:gap-8">
+      <!-- Feature Content - Extraordinary Elixirs -->
+      <div class="mb-12 md:mb-0 relative md:w-2/5">
+        <!-- Decorative background image behind text (tablet/desktop only) -->
+        <div class="absolute inset-0 z-0 hidden md:block">
+          <img src="/images/logo.png" alt=""
+            class="w-full h-full object-contain opacity-20 filter grayscale transform scale-150 translate-x-[40%]" />
+        </div>
+
+        <!-- Content container with icon, heading, text, and button -->
+        <div class="text-center md:text-left max-w-3xl mx-auto mt-10 relative z-10">
+          <!-- Icon and heading -->
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="text-white text-2xl">🍸</span>
+            <h3 class="font-abhaya text-[16px] md:text-[28px] lg:text-[36px] text-white font-bold">
+              Extraordinary Elixirs
+            </h3>
+          </div>
+
+          <!-- Description text -->
+          <p class="text-white font-abhaya text-[12px] md:text-lg lg:text-xl mb-8 px-4 md:px-0">
+            Sip into sophistication with Société's exquisite signature
+            <span class="font-semibold">cocktails</span> and
+            <span class="font-semibold">mocktails</span> - by watching bartenders live performance.
+          </p>
+
+          <!-- Button -->
+          <a href="/reservation"
+            class="inline-block bg-excelso-societe hover:bg-teal-700 text-white font-bold py-2 md:py-2.5 lg:py-3 px-6 md:px-7 lg:px-8 rounded-full transition-colors">
+            Mixing Soon
+          </a>
+        </div>
+      </div>
+
+      <!-- Swiper Container with Decorative Background -->
+      <div class="relative md:w-3/5">
+        <!-- Mobile-only decorative elements -->
+        <div class="absolute inset-0 z-0 block md:hidden">
+          <!-- Left decorative lines -->
+          <div class="absolute left-14 top-10 transform -translate-y-1/2 -translate-x-1/2 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+
+          <!-- Right decorative lines -->
+          <div class="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/4 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper relative z-10">
+          <div class="swiper-wrapper items-center">
+            <!-- Slide 1 (besar) -->
+            <div class="swiper-slide !w-auto">
+              <img src="/images/1konten1d.png" alt="Coffee 1"
+                class="w-[355px] h-[200px] md:w-[650px] md:h-[370px] lg:w-[888.76px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide !w-auto">
+              <img src="/images/1konten2d.png" alt="Coffee 2"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide !w-auto">
+              <img src="/images/1konten3d.png" alt="Coffee 3"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide !w-auto">
+              <img src="/images/1konten4.png" alt="Coffee 4"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- konten kedua -->
+  <div id="Reverie" class="container mx-auto px-4 mt-20 md:mt-28 lg:mt-32">
+
+    <!-- Desktop Layout Container (flex row) -->
+    <div class="flex flex-col md:flex-row md:items-center md:gap-6 lg:gap-8">
+      <!-- Feature Content -->
+      <div class="mb-12 md:mb-0 relative md:w-2/5">
+        <!-- Decorative background image behind text (tablet/desktop only) -->
+        <div class="absolute inset-0 z-0 hidden md:block">
+          <img src="/images/logo.png" alt=""
+            class="w-full h-full object-contain opacity-20 filter grayscale transform scale-150 translate-x-[40%]" />
+        </div>
+
+        <!-- Content container with icon, heading, text, and button -->
+        <div class="text-center md:text-left max-w-3xl mx-auto mt-10 relative z-10">
+          <!-- Icon and heading -->
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="text-white text-2xl">🍽️ </span>
+            <h3 class="font-abhaya text-[16px] md:text-[28px] lg:text-[36px] text-white font-bold">
+              Culinary Reverie
+            </h3>
+          </div>
+
+          <!-- Description text -->
+          <p class="text-white font-abhaya text-[12px] md:text-lg lg:text-xl mb-8 px-4 md:px-0">
+            Taste the artistry of every dish, from savory Indonesian classics to sweet, comforting treats — an experience crafted to delight every sense.
+          </p>
+
+          <!-- Button -->
+          <a href="/reservation"
+            class="inline-block bg-excelso-societe hover:bg-teal-700 text-white font-bold py-2 md:py-2.5 lg:py-3 px-6 md:px-7 lg:px-8 rounded-full transition-colors">
+            Tasting Soon
+          </a>
+        </div>
+      </div>
+
+      <!-- Swiper Container with Decorative Background -->
+      <div class="relative md:w-3/5">
+        <!-- Mobile-only decorative elements -->
+        <div class="absolute inset-0 z-0 block md:hidden">
+          <!-- Left decorative lines -->
+          <div class="absolute left-14 top-10 transform -translate-y-1/2 -translate-x-1/2 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+
+          <!-- Right decorative lines -->
+          <div class="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/4 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper relative z-10">
+          <div class="swiper-wrapper items-center">
+            <!-- All slides with tablet sizes -->
+            <div class="swiper-slide !w-auto">
+              <img src="/images/revirie.png" alt="Coffee 1"
+                class="w-[355px] h-[200px] md:w-[650px] md:h-[370px] lg:w-[888.76px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/revirie 1.png" alt="Coffee 2"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/revirie 2.png" alt="Coffee 3"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/revirie 3.png" alt="Coffee 4"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- konten ketiga -->
+  <div id="Savor" class="container mx-auto px-4 mt-20 md:mt-28 lg:mt-32">
+    <div class="flex flex-col md:flex-row md:items-center md:gap-6 lg:gap-8">
+      <div class="mb-12 md:mb-0 relative md:w-2/5">
+        <div class="absolute inset-0 z-0 hidden md:block">
+          <img src="/images/logo.png" alt=""
+            class="w-full h-full object-contain opacity-20 filter grayscale transform scale-150 translate-x-[40%]" />
+        </div>
+
+        <div class="text-center md:text-left max-w-3xl mx-auto mt-10 relative z-10">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="text-white text-2xl">🥩</span>
+            <h3 class="font-abhaya text-[16px] md:text-[28px] lg:text-[36px] text-white font-bold">
+              Cuts to Savor
+            </h3>
+          </div>
+
+          <p class="text-white font-abhaya text-[12px] md:text-lg lg:text-xl mb-8 px-4 md:px-0">
+            Discover the story behind every slice — premium selections, artisanal preparation, and a sear that seals in perfection at Société
+          </p>
+
+          <a href="/reservation"
+            class="inline-block bg-excelso-societe hover:bg-teal-700 text-white font-bold py-2 md:py-2.5 lg:py-3 px-6 md:px-7 lg:px-8 rounded-full transition-colors">
+            Grilling Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="relative md:w-3/5">
+        <div class="absolute inset-0 z-0 block md:hidden">
+          <div class="absolute left-14 top-10 transform -translate-y-1/2 -translate-x-1/2 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+          <div class="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/4 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+        </div>
+
+        <div class="swiper mySwiper relative z-10">
+          <div class="swiper-wrapper items-center">
+            <div class="swiper-slide !w-auto">
+              <img src="/images/savor.png" alt="Coffee 1"
+                class="w-[355px] h-[200px] md:w-[650px] md:h-[370px] lg:w-[888.76px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/savor 1.png" alt="Coffee 2"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/savor 2.png" alt="Coffee 3"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/savor 3.png" alt="Coffee 4"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- konten keempat -->
+  <div id="Coffee" class="container mx-auto px-4 mt-20 md:mt-28 lg:mt-32 md:mb-24 lg:mb-32">
+    <div class="flex flex-col md:flex-row md:items-center md:gap-6 lg:gap-8">
+      <div class="mb-12 md:mb-0 relative md:w-2/5">
+        <div class="absolute inset-0 z-0 hidden md:block">
+          <img src="/images/logo.png" alt=""
+            class="w-full h-full object-contain opacity-20 filter grayscale transform scale-150 translate-x-[40%]" />
+        </div>
+
+        <div class="text-center md:text-left max-w-3xl mx-auto mt-10 relative z-10">
+          <div class="flex items-center justify-center md:justify-start gap-3 mb-4">
+            <span class="text-white text-2xl">☕</span>
+            <h3 class="font-abhaya text-[16px] md:text-[28px] lg:text-[36px] text-white font-bold">
+              Unveiling the Art of Coffee
+            </h3>
+          </div>
+
+          <p class="text-white font-abhaya text-[12px] md:text-lg lg:text-xl mb-8 px-4 md:px-0">
+            Société has been brewing quality coffee consistently for years, you can bet we're keeping that tradition alive. 
+          </p>
+
+          <a href="/reservation"
+            class="inline-block bg-excelso-societe hover:bg-teal-700 text-white font-bold py-2 md:py-2.5 lg:py-3 px-6 md:px-7 lg:px-8 rounded-full transition-colors">
+            Brewing Soon
+          </a>
+        </div>
+      </div>
+
+      <div class="relative md:w-3/5">
+        <div class="absolute inset-0 z-0 block md:hidden">
+          <div class="absolute left-14 top-10 transform -translate-y-1/2 -translate-x-1/2 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+          <div class="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/4 opacity-80">
+            <img src="/images/decorframe1.png" alt="" class="w-auto h-auto" />
+          </div>
+        </div>
+
+        <div class="swiper mySwiper relative z-10">
+          <div class="swiper-wrapper items-center">
+            <div class="swiper-slide !w-auto">
+              <img src="/images/coffe.png" alt="Coffee 1"
+                class="w-[355px] h-[200px] md:w-[650px] md:h-[370px] lg:w-[888.76px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/coffe 1.png" alt="Coffee 2"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/coffe 2.png" alt="Coffee 3"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+            <div class="swiper-slide !w-auto">
+              <img src="/images/coffe 3.png" alt="Coffee 4"
+                class="w-[150px] h-[200px] md:w-[270px] md:h-[370px] lg:w-[375px] lg:h-[500px] object-cover rounded-sm shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section separated "discover the unique experience" -->
+<section class="relative bg-excelso-dark py-2 md:py-6 lg:py-10">
+  <!-- Garis atas (di tepian atas section) -->
+  <div class="absolute top-0 left-0 right-0 w-full">
+    <img src="/images/Rectangle 1.png" alt="Decorative Line" class="w-full" />
+  </div>
+
+  <!-- Content -->
+  <div class="w-full flex items-center justify-center">
+    <h2 class="font-abhaya text-[16px] md:text-[28px] lg:text-[36px] text-white leading-tight text-center italic">
+      Great taste begins with the right place. Explore our outlets and dine in sophistication
+    </h2>
+  </div>
+
+  <!-- Garis bawah (di tepian bawah section) -->
+  <div class="absolute bottom-0 left-0 right-0 w-full">
+    <img src="/images/Rectangle 2.png" alt="Decorative Line" class="w-full" />
+  </div>
+</section>

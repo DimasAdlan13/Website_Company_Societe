@@ -1,0 +1,150 @@
+---
+// Di frontmatter navbar.astro
+const currentPath = Astro.url.pathname;
+
+// Fungsi helper untuk menentukan class aktif
+function isActive(path) {
+  // Untuk home page khusus (karena '/' ada di semua path)
+  if (path === '/' && currentPath === '/') {
+    return true;
+  }
+  // Untuk path lain
+  return path !== '/' && currentPath.startsWith(path);
+}
+
+// Contoh penggunaan sederhana
+const homeClass = isActive('/') ? 'text-excelso-societe font-bold' : 'text-white';
+const menuClass = isActive('/menu') ? 'text-excelso-societe font-bold' : 'text-white';
+const outletClass = isActive('/outlet') ? 'text-excelso-societe font-bold' : 'text-white';
+const aboutClass = isActive('/aboutus') ? 'text-excelso-societe font-bold' : 'text-white';
+const faqClass = isActive('/faq') ? 'text-excelso-societe font-bold' : 'text-white';
+---
+
+<nav
+    class="border-gray-200 bg-excelso-dark md:bg-transparent md:bg-gradient-to-r md:from-black/10 md:via-black/25 md:to-black/30 md:backdrop-blur-sm fixed w-full top-0 left-0 z-40">
+    <div class="container p-4 md:px-6 lg:px-8 md:py-1.5 lg:py-2">
+      <!-- MOBILE NAVBAR (only sm screens) -->
+      <div class="flex items-center justify-between md:hidden" id="mobileNavbar">
+        <a href="/" class="flex items-center space-x-3">
+          <img src="/images/logo.png" class="h-10" alt="Société" />
+        </a>
+
+        <!-- Logo Tengah (hanya muncul saat menu terbuka) -->
+        <div id="middleLogo"
+          class="absolute left-1/2 transform -translate-x-1/2 opacity-0 transition-opacity duration-300">
+          <img src="/images/societelogo1.png" class="h-10" alt="Société Logo" />
+        </div>
+
+        <!-- Hamburger Button -->
+        <button onclick="toggleMenu()" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-white rounded-lg hover:bg-excelso-societe/30">
+          <span class="sr-only">Open main menu</span>
+          <!-- Hamburger icon -->
+          <svg id="iconHamburger" class="w-5 h-5 block transition duration-700 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+          <!-- X icon -->
+          <svg id="iconClose" class="w-7 h-7 hidden transition duration-700 ease-in-out"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- TABLET/DESKTOP NAVBAR - Show on md screens and up -->
+      <div class="hidden md:flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="flex items-center">
+          <img src="/images/societelogo1.png" class="w-[110px] md:w-[120px] lg:w-[142px] h-[50px] md:h-[54px] lg:h-[64px]" alt="Desktop Logo" />
+        </a>
+        <!-- Menu Centered & Rounded -->
+        <ul class="flex flex-row items-center justify-center space-x-4 md:space-x-5 lg:space-x-8 border border-white rounded-2xl px-4 md:px-6 lg:px-8 py-1.5 md:py-1.5 lg:py-2 bg-white/10 backdrop-blur-md">
+          <li><a href="/" class={`text-[16px] md:text-[18px] lg:text-[20px] px-2 md:px-2 lg:px-3 py-1 ${homeClass}`}>Home</a></li>
+          <li><a href="/menu" class={`text-[14px] md:text-[16px] lg:text-[18px] px-2 md:px-2 lg:px-3 py-1 ${menuClass} hover:text-excelso-societe`}>Menu</a></li>
+          <li><a href="/outlet" class={`text-[14px] md:text-[16px] lg:text-[18px] px-2 md:px-2 lg:px-3 py-1 ${outletClass} hover:text-excelso-societe`}>Outlet</a></li>
+          <li><a href="/aboutus" class={`text-[14px] md:text-[16px] lg:text-[18px] px-2 md:px-2 lg:px-3 py-1 ${aboutClass} hover:text-excelso-societe`}>About Us</a></li>
+          <li><a href="/faq" class={`text-[14px] md:text-[16px] lg:text-[18px] px-2 md:px-2 lg:px-3 py-1 ${faqClass} hover:text-excelso-societe`}>FAQ</a></li>
+        </ul>
+        <!-- Reserve Button -->
+        <a href="/reservation" class="ml-4 md:ml-6 lg:ml-8 px-5 md:px-6 lg:px-8 py-1.5 md:py-1.5 lg:py-2 rounded-full bg-excelso-societe text-white font-bold text-sm md:text-base lg:text-lg hover:bg-teal-700 transition">Reserve</a>
+      </div>
+    </div>
+</nav>
+
+<!-- Mobile Menu (slide out) - Only on small screens -->
+<div class="fixed top-[4rem] right-0 h-full w-full bg-excelso-dark z-40 transform translate-x-full transition-transform duration-300 md:hidden" id="navbar-default">
+  <ul class="font-medium flex flex-col items-center justify-center gap-2 p-4 mt-20">
+    <li>
+      <a href="/" id="navHome" class={`nav-link block py-4 w-full text-center text-2xl transition-colors duration-300 ${homeClass}`}>
+        Home
+      </a>
+    </li>
+    <li>
+      <a href="/menu" class={`nav-link block py-4 w-full text-center text-2xl transition-colors duration-300 ${menuClass} hover:text-excelso-societe/80`}>
+        Menu
+      </a>
+    </li>
+    <li>
+      <a href="/outlet" class={`nav-link block py-4 w-full text-center text-2xl transition-colors duration-300 ${outletClass} hover:text-excelso-societe/80`}>
+        Outlet
+      </a>
+    </li>
+    <li>
+      <a href="/aboutus" class={`nav-link block py-4 w-full text-center text-2xl transition-colors duration-300 ${aboutClass} hover:text-excelso-societe/80`}>
+        About Us
+      </a>
+    </li>
+    <li>
+      <a href="/faq" class={`nav-link block py-4 w-full text-center text-2xl transition-colors duration-300 ${faqClass} hover:text-excelso-societe/80`}>
+        FAQ
+      </a>
+    </li>
+    <!-- Download Buttons -->
+    <li class="mt-2 w-full flex flex-col items-center gap-4">
+      <!-- Google Play Button -->
+      <a href="#" class="inline-block w-[240px]">
+        <img src="/images/image 60.png" alt="Get it on Google Play" class="w-full" />
+      </a>
+
+      <!-- App Store Button -->
+      <a href="#" class="inline-block w-[240px]">
+        <img src="/images/image 61.png" alt="Download on the App Store" class="w-full" />
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script is:inline>
+    function toggleMenu() {
+      const menu = document.getElementById("navbar-default");
+      const body = document.body;
+      const middleLogo = document.getElementById("middleLogo");
+
+      menu.classList.toggle("translate-x-full");
+      menu.classList.toggle("translate-x-0");
+
+      // Toggle opacity untuk logo tengah
+      if (middleLogo.classList.contains("opacity-0")) {
+        middleLogo.classList.remove("opacity-0");
+        middleLogo.classList.add("opacity-100");
+      } else {
+        middleLogo.classList.add("opacity-0");
+        middleLogo.classList.remove("opacity-100");
+      }
+
+      // Toggle overflow pada body untuk mencegah scroll
+      body.classList.toggle("overflow-hidden");
+      body.classList.toggle("fixed");
+      body.classList.toggle("h-full");
+      body.classList.toggle("w-full");
+
+      // Toggle icon
+      const iconHamburger = document.getElementById("iconHamburger");
+      const iconClose = document.getElementById("iconClose");
+      iconHamburger.classList.toggle("hidden");
+      iconClose.classList.toggle("hidden");
+    }
+</script>

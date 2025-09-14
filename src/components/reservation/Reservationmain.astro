@@ -1,0 +1,796 @@
+<!-- Section: Reservation Societe -->
+<section class="relative bg-excelso-dark py-12 md:py-14 lg:py-16 min-h-[70vh]">
+  <div class="container mx-auto px-7 md:px-7 lg:px-8">
+    <!-- Steps Indicator -->
+    <div class="flex justify-center items-center mb-10 md:mb-14 lg:mb-16 relative">
+      <!-- Line connecting steps -->
+      <div class="absolute h-[2px] bg-gray-600 top-1/2 left-1/4 right-1/4 -translate-y-1/2 z-0"></div>
+      
+      <!-- Step 1 -->
+      <div class="flex items-center z-10">
+        <div id="step1Circle" class="w-12 h-12 rounded-full bg-[#C8A655] flex items-center justify-center text-white font-bold text-lg mr-3">
+          1
+        </div>
+        <span id="step1Text" class="text-white font-medium hidden md:block">Complete your booking</span>
+      </div>
+      
+      <!-- Arrow -->
+      <div class="mx-4 md:mx-6 lg:mx-8 text-gray-400 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+      
+      <!-- Step 2 -->
+      <div class="flex items-center z-10">
+        <div id="step2Circle" class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold text-lg mr-3">
+          2
+        </div>
+        <span id="step2Text" class="text-gray-400 font-medium hidden md:block">Confirm Details</span>
+      </div>
+      
+      <!-- Arrow -->
+      <div class="mx-4 md:mx-6 lg:mx-8 text-gray-400 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+      
+      <!-- Step 3 -->
+      <div class="flex items-center z-10">
+        <div id="step3Circle" class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold text-lg mr-3">
+          3
+        </div>
+        <span id="step3Text" class="text-gray-400 font-medium hidden md:block">Complete</span>
+      </div>
+    </div>
+
+    <!-- Combined Form Container -->
+    <div class="max-w-4xl mx-auto">
+      <form id="reservationForm" action="javascript:void(0);" novalidate>
+        <!-- Step 1 Section -->
+        <div id="step1Section" class="block">
+          <h2 class="text-white text-xl font-semibold mb-8">Complete your booking</h2>
+          
+          <!-- Location Field -->
+          <div class="mb-6">
+            <label for="location" class="block text-white mb-2">Location</label>
+            <div class="relative">
+              <select id="location" name="location" class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+                <option value="surabaya">Societe Surabaya</option>
+                <option value="jakarta">Societe Jakarta</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Date and Time Field -->
+          <div class="mb-6">
+            <label class="block text-white mb-2">Date and Time</label>
+            <div class="flex">
+              <div class="relative w-1/2 mr-1">
+                <input type="text" name="bookingDate" id="bookingDate" placeholder="dd/mm/yyyy" class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full focus:outline-none focus:ring-2 focus:ring-excelso-societe" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div class="relative w-1/2 ml-1">
+                <select name="bookingTime" id="bookingTime" class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+                  <option value="16:00">16.00</option>
+                  <option value="16:30">16.30</option>
+                  <option value="17:00">17.00</option>
+                  <option value="17:30">17.30</option>
+                  <option value="18:00">18.00</option>
+                  <option value="18:30">18.30</option>
+                  <option value="19:00">19.00</option>
+                  <option value="19:30">19.30</option>
+                  <option value="20:00">20.00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pax Field -->
+          <div class="mb-6">
+            <label class="block text-white mb-2">Pax</label>
+            <div class="flex">
+              <div class="relative w-1/2 mr-1 flex items-center bg-gray-700 rounded-lg py-3 px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                </svg>
+              
+                <select name="adults" id="adults" class="bg-gray-700 text-white appearance-none focus:outline-none focus:ring-0 flex-grow" required>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                  <option value="5">5 Adults</option>
+                  <option value="6">6 Adults</option>
+                </select>
+              </div>
+              <div class="relative w-1/2 ml-1 flex items-center bg-gray-700 rounded-lg py-3 px-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                </svg>
+                <select name="babies" id="babies" class="bg-gray-700 text-white appearance-none focus:outline-none focus:ring-0 flex-grow">
+                  <option value="0">0 Baby</option>
+                  <option value="1" selected>1 Baby</option>
+                  <option value="2">2 Babies</option>
+                  <option value="3">3 Babies</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Notes Field -->
+          <div class="mb-10">
+            <label for="notes" class="block text-white mb-2">Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Write some notes here..." class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full focus:outline-none focus:ring-2 focus:ring-excelso-societe"></textarea>
+          </div>
+          
+          <!-- Continue Button -->
+          <div class="flex justify-center">
+            <button type="button" id="continueBtn" class="bg-excelso-societe hover:bg-teal-700 text-white font-bold py-3 px-16 md:px-18 lg:px-20 rounded-full transition-colors">
+              Continue
+            </button>
+          </div>
+        </div>
+        
+       <!-- Step 2 Section -->
+<div id="step2Section" class="hidden">
+  <!-- Two-column layout container - for tablet and desktop -->
+  <div class="block md:flex md:gap-6 lg:gap-8">
+    <!-- Left Column: Personal Contact Form (Step 2) -->
+    <div class="md:w-1/2">
+      <h2 class="text-white text-xl font-semibold mb-8">Personal Contact</h2>
+      
+      <!-- Name Field -->
+      <div class="mb-6">
+        <label for="salutation" class="block text-white mb-2">Personal Contact</label>
+        <div class="flex">
+          <div class="relative w-1/4 mr-1">
+            <select id="salutation" name="salutation" class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+              <option value="mr">Mr</option>
+              <option value="mrs">Mrs</option>
+              <option value="ms">Ms</option>
+            </select>
+          </div>
+          <input type="text" id="name" name="name" placeholder="Write your name here..." class="w-3/4 ml-1 bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+        </div>
+      </div>
+      
+      <!-- Phone Field -->
+      <div class="mb-6">
+        <label for="countryCode" class="block text-white mb-2">Phone Number</label>
+        <div class="flex">
+          <div class="relative w-1/4 mr-1">
+            <select id="countryCode" name="countryCode" class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+              <option value="+62">+62</option>
+              <option value="+1">+1</option>
+              <option value="+44">+44</option>
+              <option value="+61">+61</option>
+            </select>
+          </div>
+          <input type="tel" id="phone" name="phone" placeholder="89xxx-xxxx" class="w-3/4 ml-1 bg-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+        </div>
+      </div>
+      
+      <!-- Email Field -->
+      <div class="mb-8">
+        <label for="email" class="block text-white mb-2">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email here..." class="bg-gray-700 text-white rounded-lg py-3 px-4 w-full focus:outline-none focus:ring-2 focus:ring-excelso-societe" required>
+      </div>
+      
+      <!-- Warning Message -->
+      <div class="mb-10 p-5 border border-[#C8A655] rounded-lg">
+        <h3 class="text-white font-bold mb-2">Perhatian!</h3>
+        <p class="text-white text-sm">
+          Menu tidak dapat dipesan melalui fitur reservasi ini.<br>
+          Menu hanya dapat dipesan melalui kasir saat Anda tiba di Outlet
+        </p>
+      </div>
+    </div>
+    
+    <!-- Right Column: Reservation Summary (Step 1 details) - Tablet & Desktop -->
+    <div class="hidden md:block md:w-1/2">
+      <div class="border border-[#C8A655] rounded-lg p-4 md:p-5 lg:p-6 bg-excelso-dark">
+        <h2 class="text-white text-xl font-semibold mb-4 md:mb-5 lg:mb-6">Your Reservation</h2>
+        
+        <!-- Location Summary -->
+        <div class="mb-4 md:mb-5 lg:mb-6">
+          <div class="flex items-start">
+            <!-- Location image -->
+            <div class="w-20 h-14 md:w-20 md:h-14 lg:w-24 lg:h-16 bg-gray-800 rounded overflow-hidden mr-3 md:mr-3 lg:mr-4">
+              <img id="locationImage" src="/images/outlet1.png" alt="Outlet" class="w-full h-full object-cover">
+            </div>
+            <!-- Location details -->
+            <div>
+              <h3 id="locationTitle" class="text-white text-base md:text-base lg:text-lg font-medium">Société Surabaya</h3>
+              <p id="locationAddress" class="text-gray-400 text-xs md:text-xs lg:text-sm mt-1">Jl. Mayjen HR. Muhammad No.102, Pradahkalikendal...</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Date and Time Summary -->
+        <div class="flex gap-3 md:gap-3 lg:gap-4 mb-4 md:mb-5 lg:mb-6">
+          <div class="bg-gray-800/60 rounded-lg p-3 md:p-3 lg:p-4 flex-1">
+            <div class="flex items-center">
+              <div class="mr-2 md:mr-2 lg:mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-4 md:w-4 lg:h-5 lg:w-5 text-[#C8A655]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span id="summaryDate" class="text-white text-sm md:text-sm lg:text-base">11/06/2025</span>
+            </div>
+          </div>
+          <div class="bg-gray-800/60 rounded-lg p-3 md:p-3 lg:p-4 flex-1">
+            <div class="flex items-center">
+              <div class="mr-2 md:mr-2 lg:mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-4 md:w-4 lg:h-5 lg:w-5 text-[#C8A655]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <span id="summaryTime" class="text-white text-sm md:text-sm lg:text-base">16:00</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pax Summary -->
+        <div class="bg-gray-800/60 rounded-lg p-3 md:p-3 lg:p-4 mb-4 md:mb-5 lg:mb-6">
+          <h4 class="text-white text-sm md:text-sm lg:text-base mb-2">Pax</h4>
+          <div class="flex justify-between">
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-4 md:w-4 lg:h-5 lg:w-5 text-[#C8A655] mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+              </svg>
+              <span id="summaryAdults" class="text-white text-sm md:text-sm lg:text-base">2 Adult</span>
+            </div>
+            <div class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-4 md:w-4 lg:h-5 lg:w-5 text-[#C8A655] mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+              </svg>
+              <span id="summaryBabies" class="text-white text-sm md:text-sm lg:text-base">1 Baby</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Notes Summary -->
+        <div class="mb-3 md:mb-3 lg:mb-4">
+          <h4 class="text-white text-sm md:text-sm lg:text-base mb-2">Notes</h4>
+          <div class="bg-gray-800/60 rounded-lg p-3 md:p-3 lg:p-4">
+            <p id="summaryNotes" class="text-gray-300 text-xs md:text-xs lg:text-sm">Preferably Indoor Space</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Reserve Button - Now centered and full width -->
+  <div class="flex justify-center mt-8 md:mt-9 lg:mt-10">
+    <button type="submit" id="reserveBtn" class="bg-excelso-societe hover:bg-teal-700 text-white font-bold py-3 px-10 md:px-16 lg:px-20 rounded-full transition-colors w-full md:w-auto">
+      Reserve
+    </button>
+  </div>
+</div>
+
+<!-- Step 3 Section: Confirmation -->
+<div id="step3Section" class="hidden">
+  <div class="max-w-md mx-auto">
+    <!-- Confirmation Card -->
+    <div class="border border-[#C8A655] rounded-lg p-5 md:p-5 lg:p-6 bg-excelso-dark mb-6">
+      <h2 class="text-white text-xl font-semibold text-center mb-4">Congratulation</h2>
+      <p class="text-white text-center mb-6">Your reservation has been made successfully!</p>
+      
+      <!-- QR Code -->
+      <div class="flex justify-center mb-4">
+        <img src="/images/barcode.png" alt="QR Code" class="w-32 h-32 md:w-36 md:h-36 lg:w-40 lg:h-40">
+      </div>
+      
+      <!-- Booking ID -->
+      <p class="text-white text-center mb-6">#66273</p>
+      
+      <!-- Location Summary - With Image -->
+      <div class="bg-gray-800/60 rounded-lg p-4 mb-6">
+        <div class="flex items-center">
+          <div class="w-14 h-11 md:w-14 md:h-11 lg:w-16 lg:h-12 bg-gray-700 rounded overflow-hidden mr-3">
+            <img id="confirmLocationImage" src="/images/outlet1.png" alt="Outlet" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h3 id="confirmLocationTitle" class="text-white text-sm md:text-base lg:text-base font-medium">Societe Surabaya</h3>
+            <p id="confirmLocationAddress" class="text-gray-400 text-xs">Jl. Mayjen HR. Muhammad No.102, Pra...</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Reservation Details -->
+      <div class="space-y-4">
+        <!-- Date -->
+        <div class="flex justify-between border-b border-gray-700 pb-2">
+          <div class="flex items-center">
+            <span class="text-white text-sm mr-2">Date</span>
+            <span class="text-gray-400">:</span>
+          </div>
+          <span id="confirmDate" class="text-white text-sm">11 Juni 2025</span>
+        </div>
+        
+        <!-- Time -->
+        <div class="flex justify-between border-b border-gray-700 pb-2">
+          <div class="flex items-center">
+            <span class="text-white text-sm mr-2">Time</span>
+            <span class="text-gray-400">:</span>
+          </div>
+          <span id="confirmTime" class="text-white text-sm">16:00 WIB</span>
+        </div>
+        
+        <!-- Pax -->
+        <div class="flex justify-between border-b border-gray-700 pb-2">
+          <div class="flex items-center">
+            <span class="text-white text-sm mr-2">Pax</span>
+            <span class="text-gray-400">:</span>
+          </div>
+          <span id="confirmPax" class="text-white text-sm">2 Adults, 1 Baby</span>
+        </div>
+        
+        <!-- Note -->
+        <div class="flex justify-between border-b border-gray-700 pb-2">
+          <div class="flex items-center">
+            <span class="text-white text-sm mr-2">Note</span>
+            <span class="text-gray-400">:</span>
+          </div>
+          <span id="confirmNote" class="text-white text-sm">Preferably indoor space</span>
+        </div>
+      </div>
+      
+      <!-- Download Button -->
+      <div class="flex justify-center mt-6">
+        <button type="button" id="downloadBtn" class="bg-excelso-societe hover:bg-teal-700 text-white rounded-lg py-3 px-5 md:px-5 lg:px-6 flex items-center gap-2 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+          Download Receipt
+        </button>
+      </div>
+    </div>
+    
+    <!-- Warning Message -->
+    <div class="border border-[#C8A655] rounded-lg p-5">
+      <h3 class="text-white font-bold mb-2">Perhatian!</h3>
+      <p class="text-white text-sm">
+        Menu tidak dapat dipesan melalui fitur reservasi ini.<br>
+        Menu hanya dapat dipesan melalui kasir saat Anda tiba di Outlet
+      </p>
+    </div>
+    
+    <!-- Back Button -->
+    <div class="flex justify-center mt-6">
+      <button type="button" id="backToHomeBtn" class="bg-excelso-societe hover:bg-teal-700 text-white font-bold py-3 px-12 md:px-14 lg:px-16 rounded-full transition-colors">
+        Back
+      </button>
+    </div>
+  </div>
+</div>
+
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+
+    /**
+ * Societe Reservation Form Handler with localStorage
+ * This script manages the multi-step reservation form process including:
+ * - Step indicator updates
+ * - Form data collection and localStorage saving
+ * - Form step transitions
+ * - Reservation summary for desktop view
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+  // ----- ELEMENT SELECTORS -----
+  // Form sections
+  const step1Section = document.getElementById('step1Section');
+  const step2Section = document.getElementById('step2Section');
+  const reservationForm = document.getElementById('reservationForm');
+  
+  // Navigation buttons
+  const continueBtn = document.getElementById('continueBtn');
+  
+  // Step indicators
+  const step1Circle = document.getElementById('step1Circle');
+  const step2Circle = document.getElementById('step2Circle');
+  const step3Circle = document.getElementById('step3Circle');
+  
+  const step1Text = document.getElementById('step1Text');
+  const step2Text = document.getElementById('step2Text');
+  const step3Text = document.getElementById('step3Text');
+  
+  // Summary elements (desktop only)
+  const locationTitle = document.getElementById('locationTitle');
+  const locationAddress = document.getElementById('locationAddress');
+  const locationImage = document.getElementById('locationImage');
+  const summaryDate = document.getElementById('summaryDate');
+  const summaryTime = document.getElementById('summaryTime');
+  const summaryAdults = document.getElementById('summaryAdults');
+  const summaryBabies = document.getElementById('summaryBabies');
+  const summaryNotes = document.getElementById('summaryNotes');
+  
+  // Location data for summary
+  const locationData = {
+    'surabaya': {
+      title: 'Société Surabaya',
+      address: 'Jl. Mayjen HR. Muhammad No.102, Pradahkalikendal...',
+      image: '/images/outlet1.png'
+    },
+    'jakarta': {
+      title: 'Société Jakarta',
+      address: 'Jl. Senopati No.43, Selong, Kec. Kby. Baru, Jakarta...',
+      image: '/images/outlet2.png'
+    }
+  };
+  
+  // ----- LOAD SAVED DATA IF EXISTS -----
+  loadSavedFormData();
+  
+  // ----- EVENT LISTENERS -----
+  // Continue button moves from step 1 to step 2
+  continueBtn.addEventListener('click', function() {
+    if (validateStep1()) {
+      saveFormData();
+      updateSummary(); // Update the summary on the right side
+      showStep2();
+    }
+  });
+  
+  // Form fields in step 1 - add change listeners to save data in real-time
+  document.getElementById('location').addEventListener('change', saveFormData);
+  document.getElementById('bookingDate').addEventListener('change', saveFormData);
+  document.getElementById('bookingTime').addEventListener('change', saveFormData);
+  document.getElementById('adults').addEventListener('change', saveFormData);
+  document.getElementById('babies').addEventListener('change', saveFormData);
+  document.getElementById('notes').addEventListener('input', debounce(saveFormData, 500));
+  
+  // Form submission handler
+  reservationForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    if (validateStep2()) {
+      saveFormData();
+      handleFormSubmission();
+    }
+  });
+  
+  // ----- FORM VALIDATION FUNCTIONS -----
+  function validateStep1() {
+    const location = document.getElementById('location');
+    const bookingDate = document.getElementById('bookingDate');
+    const bookingTime = document.getElementById('bookingTime');
+    const adults = document.getElementById('adults');
+    
+    if (!location.value) {
+      alert('Please select a location');
+      location.focus();
+      return false;
+    }
+    
+    if (!bookingDate.value) {
+      alert('Please select a date');
+      bookingDate.focus();
+      return false;
+    }
+    
+    if (!bookingTime.value) {
+      alert('Please select a time');
+      bookingTime.focus();
+      return false;
+    }
+    
+    if (!adults.value) {
+      alert('Please select number of adults');
+      adults.focus();
+      return false;
+    }
+    
+    return true;
+  }
+  
+  function validateStep2() {
+    const salutation = document.getElementById('salutation');
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    
+    if (!salutation.value) {
+      alert('Please select a salutation');
+      salutation.focus();
+      return false;
+    }
+    
+    if (!name.value.trim()) {
+      alert('Please enter your name');
+      name.focus();
+      return false;
+    }
+    
+    if (!phone.value.trim()) {
+      alert('Please enter your phone number');
+      phone.focus();
+      return false;
+    }
+    
+    if (!email.value.trim()) {
+      alert('Please enter your email');
+      email.focus();
+      return false;
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+      alert('Please enter a valid email address');
+      email.focus();
+      return false;
+    }
+    
+    return true;
+  }
+  
+  // ----- LOCAL STORAGE FUNCTIONS -----
+  function saveFormData() {
+    const formData = {
+      // Step 1 data
+      location: document.getElementById('location')?.value || '',
+      bookingDate: document.getElementById('bookingDate')?.value || '',
+      bookingTime: document.getElementById('bookingTime')?.value || '',
+      adults: document.getElementById('adults')?.value || '2',
+      babies: document.getElementById('babies')?.value || '1',
+      notes: document.getElementById('notes')?.value || '',
+      
+      // Step 2 data
+      salutation: document.getElementById('salutation')?.value || 'mr',
+      name: document.getElementById('name')?.value || '',
+      countryCode: document.getElementById('countryCode')?.value || '+62',
+      phone: document.getElementById('phone')?.value || '',
+      email: document.getElementById('email')?.value || ''
+    };
+    
+    localStorage.setItem('societeReservationData', JSON.stringify(formData));
+  }
+  
+  function loadSavedFormData() {
+    const savedData = localStorage.getItem('societeReservationData');
+    
+    if (savedData) {
+      const formData = JSON.parse(savedData);
+      
+      // Fill in form fields from saved data
+      if (document.getElementById('location')) document.getElementById('location').value = formData.location || 'surabaya';
+      if (document.getElementById('bookingDate')) document.getElementById('bookingDate').value = formData.bookingDate || '';
+      if (document.getElementById('bookingTime')) document.getElementById('bookingTime').value = formData.bookingTime || '16:00';
+      if (document.getElementById('adults')) document.getElementById('adults').value = formData.adults || '2';
+      if (document.getElementById('babies')) document.getElementById('babies').value = formData.babies || '1';
+      if (document.getElementById('notes')) document.getElementById('notes').value = formData.notes || '';
+      
+      if (document.getElementById('salutation')) document.getElementById('salutation').value = formData.salutation || 'mr';
+      if (document.getElementById('name')) document.getElementById('name').value = formData.name || '';
+      if (document.getElementById('countryCode')) document.getElementById('countryCode').value = formData.countryCode || '+62';
+      if (document.getElementById('phone')) document.getElementById('phone').value = formData.phone || '';
+      if (document.getElementById('email')) document.getElementById('email').value = formData.email || '';
+    }
+  }
+  
+  // ----- NAVIGATION FUNCTIONS -----
+  function showStep2() {
+    // Show/hide sections
+    step1Section.classList.add('hidden');
+    step1Section.classList.remove('block');
+    step2Section.classList.remove('hidden');
+    step2Section.classList.add('block');
+    
+    // Update step indicators
+    step1Circle.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    step1Circle.classList.remove('bg-[#C8A655]');
+    step1Circle.classList.add('bg-green-600');
+    
+    step2Circle.classList.remove('bg-gray-700');
+    step2Circle.classList.add('bg-[#C8A655]');
+    
+    // Update text colors
+    step1Text.classList.add('text-green-600');
+    step1Text.classList.remove('text-white');
+    
+    step2Text.classList.add('text-white');
+    step2Text.classList.remove('text-gray-400');
+    
+    // Scroll to top of form
+    window.scrollTo({ top: reservationForm.offsetTop - 100, behavior: 'smooth' });
+  }
+  
+  // ----- SUMMARY FUNCTIONS (DESKTOP ONLY) -----
+  function updateSummary() {
+    // Get current values from step 1
+    const location = document.getElementById('location').value;
+    const bookingDate = document.getElementById('bookingDate').value;
+    const bookingTime = document.getElementById('bookingTime').value;
+    const adults = document.getElementById('adults').value;
+    const babies = document.getElementById('babies').value;
+    const notes = document.getElementById('notes').value;
+    
+    // Format date if needed
+    let formattedDate = bookingDate;
+    try {
+      if (bookingDate) {
+        const date = new Date(bookingDate);
+        formattedDate = date.toLocaleDateString('en-GB'); // DD/MM/YYYY format
+      }
+    } catch (e) {
+      console.log('Date formatting error:', e);
+    }
+    
+    // Update summary elements
+    if (locationTitle) {
+      locationTitle.textContent = locationData[location]?.title || 'Société';
+    }
+    
+    if (locationAddress) {
+      locationAddress.textContent = locationData[location]?.address || '';
+    }
+    
+    if (locationImage) {
+      locationImage.src = locationData[location]?.image || '/images/outlet1.png';
+    }
+    
+    if (summaryDate) {
+      summaryDate.textContent = formattedDate || '';
+    }
+    
+    if (summaryTime) {
+      summaryTime.textContent = bookingTime || '';
+    }
+    
+    if (summaryAdults) {
+      summaryAdults.textContent = `${adults} Adult${adults > 1 ? 's' : ''}`;
+    }
+    
+    if (summaryBabies) {
+      summaryBabies.textContent = `${babies} ${babies > 1 ? 'Babies' : 'Baby'}`;
+    }
+    
+    if (summaryNotes) {
+      summaryNotes.textContent = notes || 'No special requests';
+    }
+  }
+  
+  // Get Step 3 section
+  const step3Section = document.getElementById('step3Section');
+
+  // Add these elements for confirmation page
+  const confirmLocationImage = document.getElementById('confirmLocationImage');
+  const confirmLocationTitle = document.getElementById('confirmLocationTitle');
+  const confirmLocationAddress = document.getElementById('confirmLocationAddress');
+  const confirmDate = document.getElementById('confirmDate');
+  const confirmTime = document.getElementById('confirmTime');
+  const confirmPax = document.getElementById('confirmPax');
+  const confirmNote = document.getElementById('confirmNote');
+  const downloadBtn = document.getElementById('downloadBtn');
+  const backToHomeBtn = document.getElementById('backToHomeBtn');
+  
+  function handleFormSubmission() {
+    const formData = new FormData(reservationForm);
+    let allFormData = {};
+    for (let [key, value] of formData.entries()) {
+      allFormData[key] = value;
+    }
+    console.log('Form data to submit:', allFormData);
+    
+    // Update step indicators for completion
+    step2Circle.innerHTML = '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    step2Circle.classList.remove('bg-[#C8A655]');
+    step2Circle.classList.add('bg-green-600');
+    
+    step3Circle.classList.remove('bg-gray-700');
+    step3Circle.classList.add('bg-[#C8A655]');
+    
+    step2Text.classList.add('text-green-600');
+    step2Text.classList.remove('text-white');
+    
+    step3Text.classList.add('text-white');
+    step3Text.classList.remove('text-gray-400');
+    
+    // Hide Step 2, show Step 3
+    step2Section.classList.add('hidden');
+    step2Section.classList.remove('block');
+    step3Section.classList.remove('hidden');
+    step3Section.classList.add('block');
+    
+    // Update confirmation details
+    updateConfirmationDetails();
+    
+    // Clear localStorage after successful submission
+    localStorage.removeItem('societeReservationData');
+    
+    // Scroll to top of form
+    window.scrollTo({ top: reservationForm.offsetTop - 100, behavior: 'smooth' });
+  }
+  
+  // New function to update confirmation details
+  function updateConfirmationDetails() {
+    const location = document.getElementById('location').value;
+    const bookingDate = document.getElementById('bookingDate').value;
+    const bookingTime = document.getElementById('bookingTime').value;
+    const adults = document.getElementById('adults').value;
+    const babies = document.getElementById('babies').value;
+    const notes = document.getElementById('notes').value;
+    
+    // Format date for display
+    let formattedDate = '';
+    try {
+      if (bookingDate) {
+        const date = new Date(bookingDate);
+        // Format to "11 Juni 2025" style
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        formattedDate = date.toLocaleDateString('id-ID', options);
+      }
+    } catch (e) {
+      formattedDate = bookingDate;
+      console.log('Date formatting error:', e);
+    }
+    
+    // Update confirmation elements
+    if (confirmLocationImage) {
+      confirmLocationImage.src = locationData[location]?.image || '/images/outlet1.png';
+    }
+    
+    if (confirmLocationTitle) {
+      confirmLocationTitle.textContent = locationData[location]?.title || 'Société';
+    }
+    
+    if (confirmLocationAddress) {
+      confirmLocationAddress.textContent = locationData[location]?.address || '';
+    }
+    
+    if (confirmDate) {
+      confirmDate.textContent = formattedDate;
+    }
+    
+    if (confirmTime) {
+      confirmTime.textContent = bookingTime + ' WIB';
+    }
+    
+    if (confirmPax) {
+      confirmPax.textContent = `${adults} Adult${adults > 1 ? 's' : ''}, ${babies} Baby${babies > 1 ? 'ies' : ''}`;
+    }
+    
+    if (confirmNote) {
+      confirmNote.textContent = notes || 'No special requests';
+    }
+  }
+
+  // Add event listener for back button
+  if (backToHomeBtn) {
+    backToHomeBtn.addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  }
+
+  // Add event listener for download button
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+      alert('Receipt downloaded successfully!');
+      // Implement actual download functionality here if needed
+    });
+  }
+
+  // Utility function for debouncing input events
+  function debounce(func, wait) {
+    let timeout;
+    return function() {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+});
+</script>
