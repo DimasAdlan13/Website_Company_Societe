@@ -1,21 +1,30 @@
 <!-- Hero Section dengan efek parallax hanya di desktop -->
+<!-- Hero Section dengan efek parallax hanya di desktop -->
 <section class="relative">
   <!-- Mobile Hero (visible on mobile only) -->
-  <div class="md:hidden relative mt-16 pt-32 pb-10">
-    <div class="absolute inset-0 z-0">
-      <img src="/images/Hero 2.png" alt="Société Mobile Hero" class="w-full h-full object-cover" />
-    </div>
-    <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 py-16">
-      <h1 class="font-abhaya text-[24px] text-white font-bold leading-tight max-w-md">
-        An Upscale Specialty coffee house, <br />
-        modern dining & bar experience
-      </h1>
+  <div class="md:hidden relative mt-16">
+    <!-- Container gambar dengan tinggi tetap -->
+    <div class="relative h-[350px] overflow-hidden">
+      <!-- Gambar background tetap full height -->
+      <img src="/images/Hero 2.png" alt="Société Mobile Hero" 
+           class="absolute inset-0 w-full h-full object-cover" />
+      
+      
+      <!-- Container teks dengan positioning absolute -->
+      <div class="absolute inset-0 z-10 flex flex-col items-center text-center px-6">
+        <!-- Atur top untuk mengontrol posisi vertikal teks -->
+        <div class="mt-24">
+          <h1 class="font-abhaya text-[24px] text-white font-bold leading-tight max-w-md">
+            An Upscale Specialty coffee house, <br />
+            modern dining & bar experience
+          </h1>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Desktop Hero (hidden on mobile, visible on tablet/desktop) -->
   <div class="hidden md:flex items-center justify-center h-[600px] lg:h-[700px] bg-fixed bg-center bg-cover relative" style="background-image: url('/images/herodekstopoo.png');">
-    <div class="absolute inset-0 bg-black/40 z-0"></div>
     <div class="relative z-10 w-full">
       <div class="container mx-auto text-center px-4">
         <h1 class="font-abhaya text-[42px] lg:text-[56px] text-white font-bold leading-tight max-w-4xl mx-auto">
@@ -29,7 +38,7 @@
 <!-- Section separated "discover the unique experience" -->
 <section class="relative bg-excelso-dark py-2 md:py-8 lg:py-10">
   <!-- Garis atas (di tepian atas section) -->
-  <div class="absolute top-0 left-0 right-0 w-full">
+  <div class="absolute -top-1 lg:-top-2 left-0 right-0 w-full ">
     <img src="/images/Rectangle 1.png" alt="Decorative Line" class="w-full" />
   </div>
 

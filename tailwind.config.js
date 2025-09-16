@@ -22,9 +22,9 @@ export default {
         lg: '2rem',      // desktop
       },
       screens: {
-        sm: "100%",   // mobile full width
-        md: "768px",  
-        lg: "1280px", // desktop modern
+        // sm: "100%",   // mobile full width
+        // md: "768px",  
+        // lg: "1280px", // desktop modern
       },
     },
   },
